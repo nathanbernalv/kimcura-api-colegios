@@ -1,0 +1,13 @@
+package com.kimcura.kimcura_colegios;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class KimcuraColegiosApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(KimcuraColegiosApplication.class, args);
+	}
+
+}
