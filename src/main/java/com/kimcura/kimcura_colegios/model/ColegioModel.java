@@ -5,10 +5,16 @@ import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+<<<<<<< HEAD
+=======
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+>>>>>>> 5de025ec51e6d64b59e2129c82f67220e48119da
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
+<<<<<<< HEAD
 @Table(name = "schools")
 public class ColegioModel {
 
@@ -22,6 +28,32 @@ public class ColegioModel {
     @Column(name = "createdAt")
     private Date createdAt;
     @Column(name = "updatedAt")
+=======
+@Table(name = "colegios")
+public class ColegioModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", updatable = false, nullable = false)
+    private UUID id;
+    @Column(name = "azure_entra_id")
+    private String azureEntraId;
+    @Column(name = "school_id")
+    private UUID schoolId;
+    @Column(name = "role")
+    private String role;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
+    @Column(name = "is_active")
+    private Boolean isActive;
+    @Column(name = "created_at")
+    private Date createdAt;
+    @Column(name = "updated_at")
+>>>>>>> 5de025ec51e6d64b59e2129c82f67220e48119da
     private Date updatedAt;
 
     public UUID getId() {
@@ -30,6 +62,7 @@ public class ColegioModel {
     public void setId(UUID id) {
         this.id = id;
     }
+<<<<<<< HEAD
     public String getName() {
         return name;
     }
@@ -41,6 +74,49 @@ public class ColegioModel {
     }
     public void setAddress(String address) {
         this.address = address;
+=======
+    public String getAzureEntraId() {
+        return azureEntraId;
+    }
+    public void setAzureEntraId(String azureEntraId) {
+        this.azureEntraId = azureEntraId;
+    }
+    public UUID getSchoolId() {
+        return schoolId;
+    }
+    public void setSchoolId(UUID schoolId) {
+        this.schoolId = schoolId;
+    }
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public Boolean getIsActive() {
+        return isActive;
+    }
+    public void setIsActive(Boolean isActive) {
+        this.isActive = isActive;
+>>>>>>> 5de025ec51e6d64b59e2129c82f67220e48119da
     }
     public Date getCreatedAt() {
         return createdAt;
@@ -55,4 +131,8 @@ public class ColegioModel {
         this.updatedAt = updatedAt;
     }
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 5de025ec51e6d64b59e2129c82f67220e48119da
 }
