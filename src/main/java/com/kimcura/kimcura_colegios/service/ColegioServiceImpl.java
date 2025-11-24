@@ -28,7 +28,7 @@ public class ColegioServiceImpl implements ColegioService {
     
     @Override
     public Optional<ColegioModel> getColegioById(UUID id) {
-        return colegioRepository.findById(id);
+        return colegioRepository.getColegiopById(id);
     }
 
     @Override
@@ -38,15 +38,15 @@ public class ColegioServiceImpl implements ColegioService {
 
     @Override
     public Boolean removeColegioById(UUID id) {
-        return colegioRepository.findById(id).map(colegio -> {
-            colegioRepository.deleteById(id);
+        return colegioRepository.getColegiopById(id).map(colegio -> {
+            colegioRepository.deleteColegiopById(id);
             return true;
         }).orElse(false);   
     }
 
     @Override
     public ColegioModel updateColegioById(UUID id, ColegioModel colegio) {
-        return colegioRepository.findById(id).map(existingColegio -> {
+        return colegioRepository.getColegiopById(id).map(existingColegio -> {
             existingColegio.setName(colegio.getName());
             existingColegio.setAddress(colegio.getAddress());
             existingColegio.setUpdatedAt(colegio.getUpdatedAt());

@@ -21,7 +21,7 @@ public class ColegioModel {
     @Column(name = "name")
     private String name;
     @Column(name = "address")
-    private UUID address;
+    private String address;
     @Column(name = "created_at")
     private Date createdAt;
     @Column(name = "updated_at")
@@ -39,10 +39,10 @@ public class ColegioModel {
     public void setName(String name) {
         this.name = name;
     }
-    public UUID getAddress() {
+    public String getAddress() {
         return address;
     }
-    public void setAddress(UUID address) {
+    public void setAddress(String address) {
         this.address = address;
     }
     public Date getCreatedAt() {
