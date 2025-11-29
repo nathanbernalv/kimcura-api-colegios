@@ -1,4 +1,4 @@
-package com.kimcura.kimcura_colegios.model;
+package com.kimcura.kimcura_colegios.entity;
 
 import java.sql.Date;
 import java.util.UUID;
@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "schools")
-public class ColegioModel {
+public class ColegioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

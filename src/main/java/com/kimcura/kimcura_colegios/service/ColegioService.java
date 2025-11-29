@@ -1,17 +1,17 @@
 package com.kimcura.kimcura_colegios.service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
-import com.kimcura.kimcura_colegios.model.ColegioModel;
+import com.kimcura.kimcura_colegios.dto.ColegioDTO;
+import com.kimcura.kimcura_colegios.entity.ColegioEntity;
 
 public interface ColegioService {
 
-    ColegioModel createColegio(ColegioModel colegioModel);
-    Optional<ColegioModel> getColegioById(UUID id);
-    List<ColegioModel> getAllColegios();
+    ColegioDTO createColegio(ColegioEntity colegioModel);
+    ColegioDTO getColegioById(UUID id);
+    List<ColegioDTO> getAllColegios();
     Boolean removeColegioById(UUID id);
-    ColegioModel updateColegioById(UUID id, ColegioModel colegio);
+    ColegioDTO updateColegioById(UUID id, ColegioEntity colegio);
 
 }

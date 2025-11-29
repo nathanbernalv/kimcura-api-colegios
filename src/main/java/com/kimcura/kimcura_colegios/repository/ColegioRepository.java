@@ -1,22 +1,22 @@
 package com.kimcura.kimcura_colegios.repository;
 
-import java.util.Optional;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import com.kimcura.kimcura_colegios.model.ColegioModel;
+
+import com.kimcura.kimcura_colegios.entity.ColegioEntity;
 
 import jakarta.transaction.Transactional;
 
 @Repository
-public interface ColegioRepository extends JpaRepository<ColegioModel, UUID> {
+public interface ColegioRepository extends JpaRepository<ColegioEntity, UUID> {
 
     @Modifying
     @Transactional
     @Query("SELECT c FROM ColegioModel c WHERE c.id = ?1") 
-    Optional<ColegioModel> getColegiopById(UUID id);
+    ColegioEntity getColegiopById(UUID id);
 
     @Modifying
     @Transactional
