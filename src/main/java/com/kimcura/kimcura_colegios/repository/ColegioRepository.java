@@ -15,12 +15,12 @@ public interface ColegioRepository extends JpaRepository<ColegioEntity, UUID> {
 
     @Modifying
     @Transactional
-    @Query("SELECT c FROM ColegioModel c WHERE c.id = ?1") 
+    @Query("SELECT c FROM ColegioEntity c WHERE c.id = ?1") 
     ColegioEntity getColegiopById(UUID id);
 
     @Modifying
     @Transactional
-    @Query("DELETE FROM ColegioModel c WHERE c.id = ?1") 
+    @Query("DELETE FROM ColegioEntity c WHERE c.id = ?1") 
     void deleteColegiopById(UUID id);
 
 }
